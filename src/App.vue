@@ -3,7 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
-cont testB = ref('')
+const testB = ref('')
 </script>
 
 <template>
@@ -15,6 +15,7 @@ cont testB = ref('')
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <p>{{ testB }}</p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
