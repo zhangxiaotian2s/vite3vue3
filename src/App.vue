@@ -3,7 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
-const testB = ref('')
+cont testB = ref('')
 </script>
 
 <template>
