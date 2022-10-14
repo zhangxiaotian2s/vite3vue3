@@ -7,6 +7,8 @@
 </template>
 <script setup lang="ts">
 import SvgIcon from '@/components/SvgIcon.vue'
+const testa = ref('1')
+window.webkit.test('xxx')
 </script>
 <style scoped lang="scss">
 .icon-svg {

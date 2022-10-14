@@ -9,7 +9,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     // 1. 接入 prettier 的规则
     'prettier',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    './.eslintrc-auto-import.json'
   ],
   overrides: [],
   // 2. 加入 prettier 的 eslint 插件
@@ -26,6 +27,9 @@ module.exports = {
     indent: ['warn', 2],
     'linebreak-style': ['warn', 'unix'],
     quotes: ['warn', 'single'],
-    semi: 0
+    semi: 0,
+    '@typescript-eslint/no-explicit-any': ['off'],
+    'vue/multi-word-component-names': 'off',
+    'no-async-promise-executor': 'off'
   }
 }

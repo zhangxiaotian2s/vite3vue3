@@ -1,5 +1,8 @@
+/* eslint-disable quotes */
+
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 import autoprefixer from 'autoprefixer'
 import viteEslint from 'vite-plugin-eslint'
 import svgLoader from 'vite-svg-loader'
@@ -18,6 +21,12 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue(),
       viteEslint(),
+      AutoImport({
+        imports: ['vue', 'vue-router', 'vuex'],
+        eslintrc: {
+          enabled: true
+        }
+      }),
       svgLoader(),
       createSvgIconsPlugin({
         iconDirs: [path.join(__dirname, 'src/assets/icons')]
@@ -33,6 +42,13 @@ export default defineConfig(({ command, mode }) => {
     },
     base: env.VITE_CDN_URL || '/',
     css: {
+      preprocessorOptions: {
+        // 引入公用的样式
+        scss: {
+          charset: false,
+          additionalData: `@import '@/assets/style/index.scss';`
+        }
+      },
       postcss: {
         plugins: [
           autoprefixer({
