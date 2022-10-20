@@ -1,30 +1,15 @@
 <template>
   <div>
-    <SvgIcon name="star" size="30px"></SvgIcon>
+    <SvgIcon name="star" size="80px"></SvgIcon>
     <SvgIcon name="twitter" size="80px"></SvgIcon>
   </div>
+
+  <router-link to="home">首页</router-link> &nbsp;&nbsp;&nbsp;
+  <router-link to="about">关于我们</router-link>
+  <br />
   <router-view />
 </template>
 <script setup lang="ts">
 import SvgIcon from '@/components/SvgIcon.vue'
 </script>
-<style scoped lang="scss">
-.icon-svg {
-  width: 30px;
-  height: 30px;
-}
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-.app-banner {
-  width: 800px;
-}
-</style>
+<style scoped lang="scss"></style>

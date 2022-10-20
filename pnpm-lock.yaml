@@ -26,6 +26,7 @@ specifiers:
   vite-svg-loader: ^3.6.0
   vue: ^3.2.37
   vue-eslint-parser: ^9.1.0
+  vue-router: ^4.1.5
   vue-tsc: ^0.40.4
 
 dependencies:
@@ -56,6 +57,7 @@ devDependencies:
   vite-plugin-svg-icons: 2.0.1_vite@3.1.0
   vite-svg-loader: 3.6.0
   vue-eslint-parser: 9.1.0_eslint@8.23.1
+  vue-router: 4.1.5_vue@3.2.39
   vue-tsc: 0.40.13_typescript@4.8.3
 
 packages:
@@ -634,6 +636,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.39
       '@vue/shared': 3.2.39
+
+  /@vue/devtools-api/6.4.5:
+    resolution: {integrity: sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==}
+    dev: true
 
   /@vue/reactivity-transform/3.2.39:
     resolution: {integrity: sha512-HGuWu864zStiWs9wBC6JYOP1E00UjMdDWIG5W+FpUx28hV3uz9ODOKVNm/vdOy/Pvzg8+OcANxAVC85WFBbl3A==}
@@ -4062,6 +4068,15 @@ packages:
       semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-router/4.1.5_vue@3.2.39:
+    resolution: {integrity: sha512-IsvoF5D2GQ/EGTs/Th4NQms9gd2NSqV+yylxIyp/OYp8xOwxmU8Kj/74E9DTSYAyH5LX7idVUngN3JSj1X4xcQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.4.5
+      vue: 3.2.39
     dev: true
 
   /vue-tsc/0.40.13_typescript@4.8.3:
